@@ -4,3 +4,29 @@ body{
 
 h1 { text-align:center;background-color: rgb(232, 197, 145);border-radius:25px;
 }
+
+.container {  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "Header Header Header"
+    "SectionA SectionB SectionC"
+    "SectionD SectionD SectionE"
+    "Footer Footer Footer";
+}
+
+.Header { grid-area: Header; }
+
+.Footer { grid-area: Footer; }
+
+.SectionA { grid-area: SectionA; }
+
+.SectionB { grid-area: SectionB; }
+
+.SectionC { grid-area: SectionC; }
+
+.SectionD { grid-area: SectionD; }
+
+.SectionE { grid-area: SectionE; }
