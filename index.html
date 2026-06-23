@@ -3,13 +3,14 @@
 <head>
     <title>HelpMe Utilities</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/x-icon" href="images/HM Utilities.bmp">
+    <link rel="icon" type="image/x-icon" href="images/logo.png">
 </head>
 
 <body>
     <div class="container">
         <div class="Header">
             <h1>HelpMe Utilities</h1>
+            <img src="images/logo.png" width="50" style="display:block;margin-left:auto;margin-right:auto;">
         </div>
 
         <div class="SectionA">
@@ -44,29 +45,40 @@
 
             <script>
                 async function loadWeather() {
-                    try {
-                        const ipInfo = await fetch("https://ipapi.co/json/").then(r => r.json());
-                        const lat = ipInfo.latitude;
-                        const lon = ipInfo.longitude;
-                        const weather = await fetch(
-                            `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current_weather=true`
-                        ).then(r => r.json());
-                        const temp = weather.current_weather.temperature;
-                        const wind = weather.current_weather.windspeed;
-                        const code = weather.current_weather.weathercode;
-                        document.getElementById("weather-box").innerHTML = `
-            <h3>Weather for ${ipInfo.city}</h3>
-            <p><strong>${temp}°C</strong></p>
-            <p>Wind: ${wind} km/h</p>
-            <p>Condition code: ${code}</p>
-        `;
-                    } catch (e) {
-                        document.getElementById("weather-box").innerHTML = "Weather unavailable.";
-                    }
+                    const box = document.getElementById("weather-box");
+
+                    // Ask browser for location
+                    navigator.geolocation.getCurrentPosition(async (pos) => {
+                        try {
+                            const lat = pos.coords.latitude;
+                            const lon = pos.coords.longitude;
+
+                            // Fetch weather
+                            const weather = await fetch(
+                                `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current_weather=true`
+                            ).then(r => r.json());
+
+                            const temp = weather.current_weather.temperature;
+                            const wind = weather.current_weather.windspeed;
+                            const code = weather.current_weather.weathercode;
+
+                            box.innerHTML = `
+                <h3>Your Weather</h3>
+                <p><strong>${temp}°C</strong></p>
+                <p>Wind: ${wind} km/h</p>
+                <p>Condition code: ${code}</p>
+            `;
+                        } catch (e) {
+                            box.innerHTML = "Weather unavailable.";
+                        }
+                    }, () => {
+                        box.innerHTML = "Location permission denied.";
+                    });
                 }
 
                 loadWeather();
             </script>
+
 
         </div>
 
