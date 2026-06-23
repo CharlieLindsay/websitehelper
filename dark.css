@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(245, 219, 181);
+    background-color: rgb(0, 0, 0);
 }
 
 h1 {
@@ -11,6 +11,7 @@ h1 {
 
 h2 {
     margin-top: 5px;
+    color:white;
 }
 
 button {
@@ -46,7 +47,7 @@ button {
 
 .SectionA {
     grid-area: SectionA;
-    background-color: rgb(184, 184, 184);
+    background-color: rgb(76, 76, 76);
     border-radius: 25px;
     margin: 5;
     margin-bottom: 10px;
@@ -56,7 +57,7 @@ button {
 
 .SectionB {
     grid-area: SectionB;
-    background-color: rgb(184, 184, 184);
+    background-color: rgb(76, 76, 76);
     border-radius: 25px;
     margin: 5;
     margin-bottom: 10px;
@@ -65,7 +66,7 @@ button {
 
 .SectionC {
     grid-area: SectionC;
-    background-color: rgb(184, 184, 184);
+    background-color: rgb(76, 76, 76);
     border-radius: 25px;
     margin: 5;
     margin-bottom: 10px;
@@ -75,7 +76,7 @@ button {
 
 .SectionD {
     grid-area: SectionD;
-    background-color: rgb(184, 184, 184);
+    background-color: rgb(76, 76, 76);
     border-radius: 25px;
     margin: 5;
     margin-bottom: 10px;
@@ -85,7 +86,7 @@ button {
 
 .SectionE {
     grid-area: SectionE;
-    background-color: rgb(184, 184, 184);
+    background-color: rgb(76, 76, 76);
     border-radius: 25px;
     margin: 5;
     margin-bottom: 10px;
@@ -94,7 +95,7 @@ button {
 
 .SectionF {
     grid-area: SectionF;
-    background-color: rgb(184, 184, 184);
+    background-color: rgb(76, 76, 76);
     border-radius: 25px;
     margin: 5;
     margin-bottom: 10px;
