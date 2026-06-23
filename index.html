@@ -3,6 +3,7 @@
 <head>
     <title>HelpMe Utilities</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="images/HM Utilities.bmp">
 </head>
 
 <body>
@@ -14,24 +15,59 @@
         <div class="SectionA">
             <h2>Quick Site Access</h2>
             <input type="button" value="" id="first_button" onclick="first_click();"
-                style="font-size:40px;background-color:rgb(165, 225, 255);color:rgb(196, 118, 0);">
+                style="font-size:40px;color:rgb(196, 118, 0);border-radius:5%;">
             <input type="button" value="Edit" onclick="first_edit();"
                 style="font-size:10px;background-color:blue;color:blanchedalmond;">
-<br>
+            <br>
             <input type="button" value="" id="second_button" onclick="second_click();"
-                style="font-size:40px;background-color:blue;color:blanchedalmond;">
+                style="font-size:40px;color:rgb(11, 125, 206);border-radius:5%;">
             <input type="button" value="Edit" onclick="second_edit();"
                 style="font-size:10px;background-color:blue;color:blanchedalmond;">
-
-
+            <br>
+            <input type="button" value="" id="third_button" onclick="third_click();"
+                style="font-size:40px;color:rgb(11, 125, 206);border-radius:5%;">
+            <input type="button" value="Edit" onclick="third_edit();"
+                style="font-size:10px;background-color:blue;color:blanchedalmond;">
         </div>
-
         <div class="SectionB" id="quickapps">
-            <h2>Quick App Access</h2>
+            <h2 style="text-align:center;">Time</h2>
+            <iframe
+                src="https://free.timeanddate.com/clock/iagzoh9d/n22/szw160/szh160/hocffebcd/hbw10/hfcffebcd/cf100/hnc09f/fas16/fac00f/mqcfff/mqs4/mql25/mqw12/mqd78/mhcfff/mhs2/mhl5/mhw2/mhd78/mmv0/hhcfff/hhs2/hhl50/hhw8/hmcfff/hms2/hml70/hmw8/hmr4/hscfff/hss3/hsl70/hsw3"
+                frameborder="0" width="160" height="160"></iframe>
         </div>
 
         <div class="SectionC">
-            <h2>Weather</h2>
+            <h2 style="text-align:right;">Weather</h2>
+            <div id="weather-box" style="font-family:Arial; color:white; padding:10px;">
+                Loading weather…
+            </div>
+
+            <script>
+                async function loadWeather() {
+                    try {
+                        const ipInfo = await fetch("https://ipapi.co/json/").then(r => r.json());
+                        const lat = ipInfo.latitude;
+                        const lon = ipInfo.longitude;
+                        const weather = await fetch(
+                            `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current_weather=true`
+                        ).then(r => r.json());
+                        const temp = weather.current_weather.temperature;
+                        const wind = weather.current_weather.windspeed;
+                        const code = weather.current_weather.weathercode;
+                        document.getElementById("weather-box").innerHTML = `
+            <h3>Weather for ${ipInfo.city}</h3>
+            <p><strong>${temp}°C</strong></p>
+            <p>Wind: ${wind} km/h</p>
+            <p>Condition code: ${code}</p>
+        `;
+                    } catch (e) {
+                        document.getElementById("weather-box").innerHTML = "Weather unavailable.";
+                    }
+                }
+
+                loadWeather();
+            </script>
+
         </div>
 
         <div class="SectionD">
@@ -39,11 +75,11 @@
         </div>
 
         <div class="SectionE">
-            <h2>Notepad</h2>
+            <h2 style="text-align:center;">Notepad</h2>
         </div>
 
         <div class="SectionF">
-            <h2>Daily Quote</h2>
+            <h2 style="text-align:right;">Daily Quote</h2>
         </div>
 
         <div class="Footer">

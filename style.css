@@ -1,39 +1,106 @@
-body{
+body {
     background-color: rgb(245, 219, 181);
 }
 
-h1 { text-align:center;background-color: rgb(229, 202, 161);border-radius:25px;margin:0;
-}
-h2{
-    margin-top:5px;
-}
-button{
-    background-color:blue;color:blanchedalmond;font-size:40px;
-}
-.container {  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 0.3fr 1fr 1fr 1fr;
-  gap: 0px 0px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "Header Header Header"
-    "SectionA SectionB SectionC"
-    "SectionD SectionE SectionF"
-    "Footer Footer Footer";
+h1 {
+    text-align: center;
+    background-color: rgb(229, 202, 161);
+    border-radius: 25px;
+    margin: 0;
 }
 
-.Header { grid-area: Header; }
+h2 {
+    margin-top: 5px;
+}
 
-.Footer { grid-area: Footer; }
+button {
+    background-color: blue;
+    color: blanchedalmond;
+    font-size: 40px;
+}
 
-.SectionA { grid-area: SectionA;background-color: rgb(184, 184, 184);border-radius:25px;margin-bottom:10px;padding: 20px; }
+.container {
+    display: grid;
+    grid-template-columns: 1fr 0.6fr 1fr;
+    grid-template-rows: 0.3fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "Header Header Header"
+        "SectionA SectionB SectionC"
+        "SectionD SectionE SectionF"
+        "Footer Footer Footer";
+}
 
-.SectionB { grid-area: SectionB;background-color: rgb(184, 184, 184);border-radius:25px;margin-bottom:10px;padding: 20px; }
+.Header {
+    grid-area: Header;
+    margin-left: 30%;
+    margin-right: 30%;
+}
 
-.SectionC { grid-area: SectionC;background-color: rgb(184, 184, 184);border-radius:25px;margin-bottom:10px;padding: 20px; }
+.Footer {
+    grid-area: Footer;
+}
 
-.SectionD { grid-area: SectionD;background-color: rgb(184, 184, 184);border-radius:25px;margin-bottom:10px;padding: 20px; }
+.SectionA {
+    grid-area: SectionA;
+    background-color: rgb(184, 184, 184);
+    border-radius: 25px;
+    margin: 5;
+    margin-bottom: 10px;
+    margin-left: 30%;
+    padding: 20px;
+}
 
-.SectionE { grid-area: SectionE;background-color: rgb(184, 184, 184);border-radius:25px;margin-bottom:10px;padding: 20px; }
+.SectionB {
+    grid-area: SectionB;
+    background-color: rgb(184, 184, 184);
+    border-radius: 25px;
+    margin: 5;
+    margin-bottom: 10px;
+    padding: 20px;
+}
 
-.SectionF { grid-area: SectionF;background-color: rgb(184, 184, 184);border-radius:25px;margin-bottom:10px;padding: 20px; }
+.SectionC {
+    grid-area: SectionC;
+    background-color: rgb(184, 184, 184);
+    border-radius: 25px;
+    margin: 5;
+    margin-bottom: 10px;
+    margin-right: 30%;
+    padding: 20px;
+}
+
+.SectionD {
+    grid-area: SectionD;
+    background-color: rgb(184, 184, 184);
+    border-radius: 25px;
+    margin: 5;
+    margin-bottom: 10px;
+    margin-left: 30%;
+    padding: 20px;
+}
+
+.SectionE {
+    grid-area: SectionE;
+    background-color: rgb(184, 184, 184);
+    border-radius: 25px;
+    margin: 5;
+    margin-bottom: 10px;
+    padding: 20px;
+}
+
+.SectionF {
+    grid-area: SectionF;
+    background-color: rgb(184, 184, 184);
+    border-radius: 25px;
+    margin: 5;
+    margin-bottom: 10px;
+    margin-right: 30%;
+    padding: 20px;
+}
+
+.SectionB iframe {
+  display: block;
+  margin: 0 auto;
+}
