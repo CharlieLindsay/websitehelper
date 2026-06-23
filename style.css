@@ -1,19 +1,24 @@
 body{
-    background-color: rgb(249, 211, 154);
+    background-color: rgb(245, 219, 181);
 }
 
-h1 { text-align:center;background-color: rgb(232, 197, 145);border-radius:25px;
+h1 { text-align:center;background-color: rgb(229, 202, 161);border-radius:25px;margin:0;
 }
-
+h2{
+    margin-top:5px;
+}
+button{
+    background-color:blue;color:blanchedalmond;font-size:40px;
+}
 .container {  display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.3fr 1fr 1fr 1fr;
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas:
     "Header Header Header"
     "SectionA SectionB SectionC"
-    "SectionD SectionD SectionE"
+    "SectionD SectionE SectionF"
     "Footer Footer Footer";
 }
 
@@ -21,12 +26,14 @@ h1 { text-align:center;background-color: rgb(232, 197, 145);border-radius:25px;
 
 .Footer { grid-area: Footer; }
 
-.SectionA { grid-area: SectionA; }
+.SectionA { grid-area: SectionA;background-color: rgb(184, 184, 184);border-radius:25px;margin-bottom:10px;padding: 20px; }
 
-.SectionB { grid-area: SectionB; }
+.SectionB { grid-area: SectionB;background-color: rgb(184, 184, 184);border-radius:25px;margin-bottom:10px;padding: 20px; }
 
-.SectionC { grid-area: SectionC; }
+.SectionC { grid-area: SectionC;background-color: rgb(184, 184, 184);border-radius:25px;margin-bottom:10px;padding: 20px; }
 
-.SectionD { grid-area: SectionD; }
+.SectionD { grid-area: SectionD;background-color: rgb(184, 184, 184);border-radius:25px;margin-bottom:10px;padding: 20px; }
 
-.SectionE { grid-area: SectionE; }
+.SectionE { grid-area: SectionE;background-color: rgb(184, 184, 184);border-radius:25px;margin-bottom:10px;padding: 20px; }
+
+.SectionF { grid-area: SectionF;background-color: rgb(184, 184, 184);border-radius:25px;margin-bottom:10px;padding: 20px; }
