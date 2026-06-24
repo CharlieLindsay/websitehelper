@@ -16,4 +16,5 @@ A demonstration of the site running can be accessed at https://demo.charleilei.d
 - https://grid.layoutit.com/ for the grid layout template to improve time
 
 AI was only use for debugging and understanding concepts I didn't previously know. 
+
 This was made as a Stardance Project. 
