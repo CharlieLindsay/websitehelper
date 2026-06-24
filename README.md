@@ -1,7 +1,7 @@
 # HelpMe Utilities Website
 A simple website that helps streamline users workflow
 A demonstration of the site running can be accessed at https://demo.charleilei.dpdns.org/
-This was made as a Stardance Project. 
+
 
 ## Requirements
 - Localstorage is used in this website so must use up to date and common browser
@@ -16,3 +16,4 @@ This was made as a Stardance Project.
 - https://grid.layoutit.com/ for the grid layout template to improve time
 
 AI was only use for debugging and understanding concepts I didn't previously know. 
+This was made as a Stardance Project. 
