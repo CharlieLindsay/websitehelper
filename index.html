@@ -109,8 +109,13 @@
         </div>
 
         <div class="SectionF">
-            <h2 style="text-align:right;">Daily Quote</h2>
+            <h2 style="text-align:right;">Image</h2>
+            <input type="file" id="uploadBannerImage" onchange="saveImage();" style="font-size:10px;">
+            <br><br>
+            <img id="savedImage" style="max-width:80%; display:none; border:1px solid white;">
+
         </div>
+
 
         <div class="Footer">
             <button onclick="window.location.href='dark-mode.html';"
@@ -118,6 +123,7 @@
                 Mode</button>
         </div>
     </div>
+    <p style="color:rgb(0, 0, 0);">Made by Charlie Lindsay</p>
     <script src="script.js"></script>
 </body>
 
