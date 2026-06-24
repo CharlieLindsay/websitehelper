@@ -14,8 +14,8 @@ h2 {
     color:white;
 }
 
-button {
-    background-color: blue;
+input {
+    background-color: rgb(12, 12, 73);
     color: blanchedalmond;
     font-size: 40px;
 }

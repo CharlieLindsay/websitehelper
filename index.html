@@ -9,14 +9,14 @@
 <body>
     <div class="container">
         <div class="Header">
-            <h1>HelpMe Utilities</h1>
+            <h1 style="margin-bottom:2px;">HelpMe Utilities</h1>
             <img src="images/logo.png" width="50" style="display:block;margin-left:auto;margin-right:auto;">
         </div>
 
         <div class="SectionA">
             <h2>Quick Site Access</h2>
             <input type="button" value="" id="first_button" onclick="first_click();"
-                style="font-size:40px;color:rgb(196, 118, 0);border-radius:5%;">
+                style="font-size:40px;color:rgb(11, 125, 206);border-radius:5%;">
             <input type="button" value="Edit" onclick="first_edit();"
                 style="font-size:10px;background-color:blue;color:blanchedalmond;">
             <br>
@@ -40,7 +40,7 @@
         <div class="SectionC">
             <h2 style="text-align:right;">Weather</h2>
             <div id="weather-box" style="font-family:Arial; color:white; padding:10px;">
-                Loading weather…
+                Loading weather
             </div>
 
             <script>
@@ -64,7 +64,7 @@
 
                             box.innerHTML = `
                 <h3>Your Weather</h3>
-                <p><strong>${temp}°C</strong></p>
+                <p><strong>${temp}C</strong></p>
                 <p>Wind: ${wind} km/h</p>
                 <p>Condition code: ${code}</p>
             `;
@@ -95,7 +95,8 @@
         </div>
 
         <div class="Footer">
-<button onclick="window.location.href='dark-mode.html';" style="font-size:15px;background-color:black;color:white;">Dark Mode</button>
+            <button onclick="window.location.href='dark-mode.html';"
+                style="font-size:15px;background-color:black;color:white;border-radius:20px;display:block;margin-left:auto;margin-right:auto;">Dark Mode</button>
         </div>
     </div>
     <script src="script.js"></script>
