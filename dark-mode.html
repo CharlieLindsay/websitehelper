@@ -17,18 +17,15 @@
             <h2>Quick Site Access</h2>
             <input type="button" value="" id="first_button" onclick="first_click();"
                 style="font-size:40px;border-radius:5%;">
-            <input type="button" value="Edit" onclick="first_edit();"
-                style="font-size:10px;">
+            <input type="button" value="Edit" onclick="first_edit();" style="font-size:10px;">
             <br>
             <input type="button" value="" id="second_button" onclick="second_click();"
                 style="font-size:40px;border-radius:5%;">
-            <input type="button" value="Edit" onclick="second_edit();"
-                style="font-size:10px;">
+            <input type="button" value="Edit" onclick="second_edit();" style="font-size:10px;">
             <br>
             <input type="button" value="" id="third_button" onclick="third_click();"
                 style="font-size:40px;border-radius:5%;">
-            <input type="button" value="Edit" onclick="third_edit();"
-                style="font-size:10px;">
+            <input type="button" value="Edit" onclick="third_edit();" style="font-size:10px;">
         </div>
         <div class="SectionB" id="quickapps">
             <h2 style="text-align:center;">Time</h2>
@@ -40,7 +37,7 @@
         <div class="SectionC">
             <h2 style="text-align:right;">Weather</h2>
             <div id="weather-box" style="font-family:Arial; color:white; padding:10px;">
-                Loading weather…
+                Loading weather
             </div>
 
             <script>
@@ -64,7 +61,7 @@
 
                             box.innerHTML = `
                 <h3>Your Weather</h3>
-                <p><strong>${temp}°C</strong></p>
+                <p><strong>${temp}C</strong></p>
                 <p>Wind: ${wind} km/h</p>
                 <p>Condition code: ${code}</p>
             `;
@@ -83,21 +80,46 @@
         </div>
 
         <div class="SectionD">
-            <h2>Timer</h2>
+            <h2>Stopwatch</h2>
+            <iframe style="width:100%;max-width:360px;height:300px;"
+                src="https://stopwatch-app.com/widget/stopwatch?theme=dark&color=indigo" frameborder="0"></iframe>
         </div>
 
         <div class="SectionE">
             <h2 style="text-align:center;">Notepad</h2>
+            <div style="max-width:500px;margin:auto;">
+                <textarea id="notepad"
+                    style="width:100%;height:200px;font-size:16px;background-color:rgb(15, 1, 118);color:white;"></textarea>
+            </div>
+
+            <script>
+                // Load saved text on page load
+                document.getElementById("notepad").value =
+                    localStorage.getItem("notepad_text") || "";
+
+                // Save on every keystroke
+                document.getElementById("notepad").addEventListener("input", function () {
+                    localStorage.setItem("notepad_text", this.value);
+                });
+            </script>
+
         </div>
 
         <div class="SectionF">
-            <h2 style="text-align:right;">Daily Quote</h2>
+            <h2 style="text-align:right;">Image</h2>
+            <input type="file" id="uploadBannerImage" onchange="saveImage();" style="font-size:10px;">
+            <br><br>
+            <img id="savedImage" style="max-width:80%; display:none; border:1px solid white;">
+
         </div>
 
         <div class="Footer">
-<button onclick="window.location.href='index.html';" style="font-size:15px;background-color:rgb(255, 255, 255);color:rgb(0, 0, 0);display:block;margin-left:auto;margin-right:auto;border-radius:20px;">Light Mode</button>
+            <button onclick="window.location.href='index.html';"
+                style="font-size:15px;background-color:rgb(255, 255, 255);color:rgb(0, 0, 0);display:block;margin-left:auto;margin-right:auto;border-radius:20px;">Light
+                Mode</button>
         </div>
     </div>
+    <p style="color:white;">Made by Charlie Lindsay</p>
     <script src="script.js"></script>
 </body>
 

@@ -104,3 +104,30 @@ function third_edit() {
 
     document.getElementById("third_button").value = third_name;
 }
+
+
+// Load saved image on page load
+window.addEventListener("DOMContentLoaded", () => {
+    const saved = localStorage.getItem("saved_banner_image");
+    const img = document.getElementById("savedImage");
+
+    if (saved) {
+        img.src = saved;
+        img.style.display = "block";
+    }
+});
+
+function saveImage() {
+    const input = document.getElementById("uploadBannerImage");
+    const file = input.files[0];
+    const img = document.getElementById("savedImage");
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = function (e) {
+        const base64 = e.target.result;
+        localStorage.setItem("saved_banner_image", base64);
+        img.src = base64;
+        img.style.display = "block";
+    };
+    reader.readAsDataURL(file);
+}

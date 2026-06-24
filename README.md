@@ -15,6 +15,6 @@ A demonstration of the site running can be accessed at https://demo.charleilei.d
 ## Assistance From:
 - https://grid.layoutit.com/ for the grid layout template to improve time
 
-AI was only use for debugging and understanding concepts I didn't previously know. 
+AI was only use for debugging and understanding concepts I didn't previously know. And for Base64 conversions. 
 
 This was made as a Stardance Project. 
