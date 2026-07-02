@@ -21,15 +21,13 @@ Everything is all over your device. There is no central place where utilties can
 
 
 ## Data used from:
-- https://www.timeanddate.com/
-- https://api.open-meteo.com
+- https://www.timeanddate.com/ - Embedded clock
+- https://api.open-meteo.com - Weather api
 
 ## Attribution:
-- https://grid.layoutit.com/ for the grid layout template to improve time
+- https://grid.layoutit.com/ For the grid layout template to improve time
 - https://patdryburgh.com/blog/adding-a-custom-duckduckgo-search-bar-to-your-site/ Took inspiration and parts of this code
-- https://www.timeanddate.com for the embedded clock
-- https://stopwatch-app.com/ for the stopwatch app
-- https://open-meteo.com/ for weather data/api
+- https://stopwatch-app.com/ For the stopwatch app
 
 AI was only use for debugging and understanding concepts I didn't previously know. And for Base64 conversions. 
 
