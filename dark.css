@@ -35,8 +35,11 @@ input {
 
 .Header {
     grid-area: Header;
-    margin-left: 30%;
-    margin-right: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 10px;
 }
 
 .Footer {
@@ -106,4 +109,10 @@ input {
 .SectionB iframe {
   display: block;
   margin: 0 auto;
+}
+
+
+.Header img {
+    position: absolute;
+    left: 0;
 }
