@@ -9,9 +9,18 @@
 <body>
     <div class="container">
         <div class="Header">
-            <img src="images/logo.png" width="50px">
-            <h1 style="margin-bottom:2px;padding-left:50px;padding-right:50px;">HelpMe Utilities</h1>
+            <div class="top">
+                <img src="images/logo.png" width="50px">
+                <h1 style="margin-bottom:2px;padding-left:50px;padding-right:50px;">HelpMe Utilities</h1>
+            </div>
+            <div style="text-align:center;">
+                <form method="get" id="search" action="https://duckduckgo.com/">
+                    <input type="text" name="q" maxlength="255" placeholder="Search" />
+                    <input type="submit" value="DuckDuckGo Search" style="display: none;" />
+                </form>
+            </div>
         </div>
+
 
         <div class="SectionA">
             <h2>Quick Site Access</h2>
@@ -112,7 +121,8 @@
             <h2 style="text-align:right;">Image</h2>
             <br><br>
             <img id="savedImage" style="max-width:80%; display:none; border:1px solid white;">
-            <input type="file" id="uploadBannerImage" onchange="saveImage();" style="font-size:10px;background-color:beige;color:black;border-radius:10px;">
+            <input type="file" id="uploadBannerImage" onchange="saveImage();"
+                style="font-size:10px;background-color:beige;color:black;border-radius:10px;">
         </div>
 
 

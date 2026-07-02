@@ -13,6 +13,7 @@ Everything is all over your device. There is no central place where utilties can
 - Stopwatch
 - Localstorage-stored simple notepad tool
 - Image insert spot for a commonly required image or timetable
+- Search bar for DuckDuckGo
 
 ## Requirements
 - Localstorage is used in this website so must use up to date and common browser
@@ -23,8 +24,12 @@ Everything is all over your device. There is no central place where utilties can
 - https://www.timeanddate.com/
 - https://api.open-meteo.com
 
-## Assistance From:
+## Attribution:
 - https://grid.layoutit.com/ for the grid layout template to improve time
+- https://patdryburgh.com/blog/adding-a-custom-duckduckgo-search-bar-to-your-site/ Took inspiration and parts of this code
+- https://www.timeanddate.com for the embedded clock
+- https://stopwatch-app.com/ for the stopwatch app
+- https://open-meteo.com/ for weather data/api
 
 AI was only use for debugging and understanding concepts I didn't previously know. And for Base64 conversions. 
 

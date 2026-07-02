@@ -35,11 +35,6 @@ input {
 
 .Header {
     grid-area: Header;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    padding: 10px;
 }
 
 .Footer {
@@ -115,4 +110,25 @@ input {
 .Header img {
     position: absolute;
     left: 0;
+}
+.top{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 10px;
+}
+.top img {
+    position: absolute;
+    left: 0;
+}
+
+.Header form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+input::placeholder, 
+textarea::placeholder {
+  text-align: center;
 }
